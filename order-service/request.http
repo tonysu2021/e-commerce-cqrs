@@ -1,0 +1,14 @@
+@host = localhost:8080
+
+### 新增一筆定訂單
+
+# @name create_order
+POST /order/api/orders HTTP/1.1
+Host: {{host}}
+Content-Type: application/json
+
+{
+    "itemType":"LAPTOP",
+    "price": 500,
+    "currency":"1000"
+}

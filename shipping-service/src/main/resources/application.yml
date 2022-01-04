@@ -1,0 +1,5 @@
+server:  port: 8082
+  servlet:    context-path: /shipping
+spring:
+  application:
+    name: shipping-service  datasource:    platform: mysql    url: jdbc:mysql://172.20.111.188:3306/shipping    driver-class-name: com.mysql.cj.jdbc.Driver    username: root    password: Java12345!    continue-on-error: false  jpa:    hibernate:      ddl-auto: create-drop    properties:      hibernate:        dialect: org.hibernate.dialect.MySQL5InnoDBDialect      axon:  axonserver:    servers: ${AXONSERVER_HOST:axonserver}:${AXONSERVER_PORT:8124}

@@ -1,0 +1,48 @@
+@host = localhost:8084
+
+### 新增一個銀行帳戶
+
+# @name create
+POST /bank-account/create HTTP/1.1
+Host: {{host}}
+Content-Type: application/json
+
+{
+    "startingBalance":3000
+}
+
+### 存款
+
+@id = fceeab54-6dae-4bf3-ab29-b0b03ebf0a2f
+
+# @name deposit
+PUT /bank-account/deposit HTTP/1.1
+Host: {{host}}
+Content-Type: application/json
+Content-Length: 80
+
+{
+    "accountId":"{{id}}",
+    "amount": 2000
+}
+
+
+### 扣款
+
+# @name withdraw
+PUT /bank-account/withdraw HTTP/1.1
+Host: {{host}}
+Content-Type: application/json
+
+{
+    "accountId":"{{id}}",
+    "amount": 1000
+}
+
+###
+
+# @name getAccount
+GET /manage-account/get-account?id={{id}} HTTP/1.1
+Host: {{host}}
+
+###
