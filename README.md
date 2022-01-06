@@ -48,6 +48,10 @@ Tony.su
   172.20.101.27 axonserver
   ```
 
+## API測試
+
+VsCode 請安裝 REST Client套件，執行 xx.http 檔案，例如request.http。
+
 ## Swagger UI
 
 see <http://localhost:8080/swagger-ui.html>
